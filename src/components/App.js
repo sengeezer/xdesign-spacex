@@ -1,6 +1,7 @@
 import './App.scss';
 import Footer from './Footer';
 import Header from './Header';
+import LaunchList from './LaunchList';
 import LaunchListFilters from './LaunchListFilters';
 
 const App = () => {
@@ -9,7 +10,7 @@ const App = () => {
       <Header />
       <main>
         <LaunchListFilters />
-        {/* Launch list */}
+        <LaunchList />
       </main>
       <Footer />
     </div>
