@@ -1,12 +1,10 @@
 import './App.scss';
+import Header from './Header';
 
-function App() {
+const App = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        {/* Spacex-logo */}
-        {/* Reload data */}
-      </header>
+      <Header />
       <main>
         {/* Launch filters */}
         {/* Launch list */}
@@ -16,6 +14,6 @@ function App() {
       </footer>
     </div>
   );
-}
+};
 
 export default App;
