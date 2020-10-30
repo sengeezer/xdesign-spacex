@@ -1,4 +1,5 @@
 import './App.scss';
+import Footer from './Footer';
 import Header from './Header';
 
 const App = () => {
@@ -9,9 +10,7 @@ const App = () => {
         {/* Launch filters */}
         {/* Launch list */}
       </main>
-      <footer>
-        <p>All data &copy; SpaceX</p>
-      </footer>
+      <Footer />
     </div>
   );
 };
