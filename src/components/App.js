@@ -1,17 +1,13 @@
 import './App.scss';
 import Footer from './Footer';
 import Header from './Header';
-import LaunchList from './LaunchList';
-import LaunchListFilters from './LaunchListFilters';
+import Main from './Main';
 
 const App = () => {
   return (
     <div className="App">
       <Header />
-      <main>
-        <LaunchListFilters />
-        <LaunchList />
-      </main>
+      <Main />
       <Footer />
     </div>
   );
