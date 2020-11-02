@@ -6,7 +6,7 @@ const LaunchList = ({ launches }) => {
   });
 
   return (
-    <ul>
+    <ul className="LaunchList-list">
       {launchListItems}
     </ul>
   );
