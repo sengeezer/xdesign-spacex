@@ -16,9 +16,33 @@ const Main = () => {
     })();
   }, [launches]);
 
+  const sortLaunches = async (sortType, value = null) => {
+    let sortedLaunches;
+
+    switch (sortType) {
+      case 'asc':
+        sortedLaunches = await launches.sort((a, b) => a.flight_number < b.flight_number ? 1 : -1);
+        
+        setLaunches(sortedLaunches);
+        break;
+      case 'desc':
+        sortedLaunches = await launches.sort((a, b) => a.flight_number > b.flight_number ? 1 : -1);
+        
+        setLaunches(sortedLaunches);
+        break;
+      case 'year':
+        sortedLaunches = await launches.filter(launch => launch.launch_year === value);
+        
+        setLaunches(sortedLaunches);
+        break;
+      default:
+        return;
+    }
+  };
+
   return (
     <main>
-      <LaunchListFilters />
+      <LaunchListFilters sortLaunches={sortLaunches} />
       <LaunchList launches={launches} />
     </main>
   );
