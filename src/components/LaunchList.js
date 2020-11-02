@@ -1,24 +1,13 @@
-const LaunchList = () => {
+import LaunchListItem from './LaunchListItem';
+
+const LaunchList = ({ launches }) => {
+  const launchListItems = launches.map(launch => {
+    return <LaunchListItem launch={launch} key={launch.flight_number} />
+  });
+
   return (
     <ul>
-      <li>
-        <h2>#1</h2>
-        <h3>Launch name</h3>
-        <p>Date</p>
-        <p>Vehicle name</p>
-      </li>
-      <li>
-        <h2>#2</h2>
-        <h3>Launch name</h3>
-        <p>Date</p>
-        <p>Vehicle name</p>
-      </li>
-      <li>
-        <h2>#3</h2>
-        <h3>Launch name</h3>
-        <p>Date</p>
-        <p>Vehicle name</p>
-      </li>
+      {launchListItems}
     </ul>
   );
 };
