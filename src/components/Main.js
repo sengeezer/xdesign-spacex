@@ -5,16 +5,18 @@ import LaunchListFilters from './LaunchListFilters';
 
 const Main = () => {
   const [isLoading, setLoading] = useState(true);
+  const [sortMode, setSortMode] = useState('asc');
   const [launches, setLaunches] = useState([]);
 
   useEffect(() => {
     (async () => {
       const { data } = await spacex.get('/launches', {});
 
-      setLaunches(data);
+      isLoading ? setLaunches(data) : console.log('not loading');
+      
       setLoading(false);
     })();
-  }, [launches]);
+  }, [launches, isLoading]);
 
   const sortLaunches = async (sortType, value = null) => {
     let sortedLaunches;
