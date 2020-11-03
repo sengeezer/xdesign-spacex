@@ -1,7 +1,7 @@
-const LaunchListFilters = ({ sortLaunches }) => {
+const LaunchListFilters = ({ sortLaunches, resetList }) => {
   const onSortChange = (e) => {
-    sortLaunches('year', e.target.value)
-    console.log('onSortChange', e.target.value);
+    // resetList();
+    sortLaunches('year', e.target.value);
   };
 
   return (

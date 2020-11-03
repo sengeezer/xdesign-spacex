@@ -18,23 +18,30 @@ const Main = () => {
     })();
   }, [launches, isLoading]);
 
+  const resetList = () => {
+    setLoading(true);
+  };
+
   const sortLaunches = async (sortType, value = null) => {
     let sortedLaunches;
 
     switch (sortType) {
       case 'asc':
+        await resetList();
         sortedLaunches = await launches.sort((a, b) => a.flight_number < b.flight_number ? 1 : -1);
-        
+
         setLaunches(sortedLaunches);
         break;
       case 'desc':
+        await resetList();
         sortedLaunches = await launches.sort((a, b) => a.flight_number > b.flight_number ? 1 : -1);
-        
+
         setLaunches(sortedLaunches);
         break;
       case 'year':
+        await resetList();
         sortedLaunches = await launches.filter(launch => launch.launch_year === value);
-        
+
         setLaunches(sortedLaunches);
         break;
       default:
@@ -44,7 +51,7 @@ const Main = () => {
 
   return (
     <main>
-      <LaunchListFilters sortLaunches={sortLaunches} />
+      <LaunchListFilters sortLaunches={sortLaunches} resetList={resetList} />
       <LaunchList launches={launches} />
     </main>
   );
