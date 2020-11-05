@@ -14,7 +14,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 * Complete refresh (/ reset) and sort functionality
 * Add sort order change to Redux (?)
-* Complete styling 
+* Complete styling (& add icons)
 * Populate launch year drop down from API
 * Add propTypes
 * Add tests

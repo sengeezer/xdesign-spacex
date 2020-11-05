@@ -1,15 +1,28 @@
-import LaunchListItem from './LaunchListItem';
+import { connect } from 'react-redux';
 
-const LaunchList = ({ launches }) => {
-  const launchListItems = launches.map(launch => {
+import LaunchListItem from './LaunchListItem';
+import getVisibleLaunches from '../selectors/launches';
+
+export const LaunchList = props => {
+  const launchListItems = props.launches.map(launch => {
     return <LaunchListItem launch={launch} key={launch.flight_number} />
   });
 
   return (
     <ul className="LaunchList-list">
-      {launchListItems}
+      {
+        props.launches.length === 0 ? (
+          <li>No launches found</li>
+        ) : (
+          {launchListItems}
+        )
+      }
     </ul>
   );
 };
 
-export default LaunchList;
+const mapStateToProps = ({ launches, filters }) => ({
+  launches: getVisibleLaunches(launches, filters),
+});
+
+export default connect(mapStateToProps)(LaunchList);

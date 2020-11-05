@@ -54,7 +54,7 @@ export class LaunchListFilters extends Component {
           <option value="2007">2007</option>
           <option value="2006">2006</option>
         </select>
-        <button onClick={this.onSortChange}>Sort Descending ⇅</button>
+        <button onClick={this.onSortChange}>Sort {this.state.sortBy === 'desc' ? 'Descending' : 'Ascending'} ⇅</button>
       </>
     );
   }
