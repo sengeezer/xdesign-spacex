@@ -6,11 +6,9 @@ export const setLaunches = launches => ({
 });
 
 export const startSetLaunches = () => (
-  (dispatch) => (
-    async (dispatch) => {
-      const { data } = await spacex.get('/launches', {});
+  async (dispatch) => {
+    const { data } = await spacex.get('/launches', {});
 
-      return dispatch(setLaunches(data));
-    }
-  )
+    return dispatch(setLaunches(data));
+  }
 );
