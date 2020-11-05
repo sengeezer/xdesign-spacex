@@ -7,6 +7,6 @@ export const sortAsc = () => ({
 });
 
 export const filterByYear = year => ({
-  type: 'SORT_BY_YEAR',
+  type: 'FILTER_BY_YEAR',
   year,
 });

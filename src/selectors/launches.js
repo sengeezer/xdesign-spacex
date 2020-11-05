@@ -4,8 +4,8 @@ const getVisibleLaunches = (launches, {
   sortBy,
   year,
 }) => {
-  // console.log(launches, sortBy, year);
-  // result: works, 'asc', ''
+  console.log(sortBy, year);
+  // result: (works, )'asc', ''
   return launches.filter((launch) => {
     const filterByDate = sortBy === 'year';
     const yearMatch = launch.launch_year === year;
@@ -13,11 +13,11 @@ const getVisibleLaunches = (launches, {
     return filterByDate ? yearMatch : true;
   }).sort((a, b) => {
     if (sortBy === 'asc') {
-      return a.flight_number < b.flight_number ? 1 : -1;
+      return a.flight_number > b.flight_number ? 1 : -1;
     }
 
     if (sortBy === 'desc') {
-      return a.flight_number > b.flight_number ? 1 : -1;
+      return a.flight_number < b.flight_number ? 1 : -1;
     }
 
     return undefined;

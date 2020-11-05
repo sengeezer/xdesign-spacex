@@ -14,8 +14,10 @@ const filterReducer = (state = reducerDefaults.filters, action) => {
     case 'SORT_ASC':
       return { ...state, sortBy: 'asc' };
     case 'FILTER_BY_YEAR':
+      // console.log('filter:', action.year);
       return { ...state, sortBy: 'date', year: action.year };
     default:
+      // console.log('default action type is', action.type);
       return state;
   }
 };

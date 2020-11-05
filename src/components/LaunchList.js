@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import LaunchListItem from './LaunchListItem';
 import getVisibleLaunches from '../selectors/launches';
 
-export const LaunchList = props => {  
+export const LaunchList = props => {
   return (
     <ul className="LaunchList-list">
       {
@@ -18,6 +18,14 @@ export const LaunchList = props => {
     </ul>
   );
 };
+
+// const mapStateToProps = (state) => {
+//   const { launches, filters } = state;
+//   console.log('from state:', filters);
+//   return {
+//     launches: getVisibleLaunches(launches, filters),
+//   };
+// };
 
 const mapStateToProps = ({ launches, filters }) => ({
   launches: getVisibleLaunches(launches, filters),

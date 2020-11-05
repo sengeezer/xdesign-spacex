@@ -7,26 +7,25 @@ export class LaunchListFilters extends Component {
   constructor(props) {
     super(props);
 
-    this.state = {
-      sortBy: 'asc'
-    };
+    // this.state = {
+    //   sortBy: 'asc'
+    // };
   }
 
   onSortChange = (e) => {
-    const { sortBy } = this.state;
-
+    const { filters } = this.props;
+    
     e.preventDefault();
     
-    if (sortBy === 'desc') {
-      this.props.sortDesc();
-      this.setState(() => ({ sortBy: 'desc' }));
-    } else {
+    if (filters.sortBy === 'desc') {
       this.props.sortAsc();
-      this.setState(() => ({ sortBy: 'asc' }));
+    } else {
+      this.props.sortDesc();
     }
   };
 
   onFilterChange = (e) => {
+    // Works: console.log(e.target.value);
     this.props.filterByYear(e.target.value)
   };
 
@@ -54,7 +53,7 @@ export class LaunchListFilters extends Component {
           <option value="2007">2007</option>
           <option value="2006">2006</option>
         </select>
-        <button onClick={this.onSortChange}>Sort {this.state.sortBy === 'desc' ? 'Descending' : 'Ascending'} ⇅</button>
+        <button onClick={this.onSortChange}>Sort {this.props.filters.sortBy === 'desc' ? 'Descending' : 'Ascending'} ⇅</button>
       </>
     );
   }
