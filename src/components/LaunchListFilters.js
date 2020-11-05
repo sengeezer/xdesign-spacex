@@ -13,11 +13,21 @@ export class LaunchListFilters extends Component {
   }
 
   onSortChange = (e) => {
-    if (e.target.value === 'desc') {
+    const { sortBy } = this.state;
+
+    e.preventDefault();
+    
+    if (sortBy === 'desc') {
       this.props.sortDesc();
+      this.setState(() => ({ sortBy: 'desc' }));
     } else {
       this.props.sortAsc();
+      this.setState(() => ({ sortBy: 'asc' }));
     }
+  };
+
+  onFilterChange = (e) => {
+    this.props.filterByYear(e.target.value)
   };
 
   render() {
@@ -25,7 +35,7 @@ export class LaunchListFilters extends Component {
       <>
         <select
             // value={this.props.filters.sortBy}
-            onChange={this.onSortChange}
+            onChange={this.onFilterChange}
           >
           <option value="year">Filter by Year ▾</option>
           <option value="2020">2020</option>
