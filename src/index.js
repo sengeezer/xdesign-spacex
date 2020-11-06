@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 
 import configureStore from './store/configureStore';
-import './index.scss';
+import './styles/styles.scss';
 import App from './components/App';
 import reportWebVitals from './reportWebVitals';
 import { startSetLaunches } from './actions/launches';
