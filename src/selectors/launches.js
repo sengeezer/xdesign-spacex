@@ -1,13 +1,9 @@
-// import dayjs from 'dayjs';
-
 const getVisibleLaunches = (launches, {
   sortBy,
   year,
 }) => {
-  console.log(sortBy, year);
-  // result: (works, )'asc', ''
   return launches.filter((launch) => {
-    const filterByDate = sortBy === 'year';
+    const filterByDate = sortBy === 'date';
     const yearMatch = launch.launch_year === year;
 
     return filterByDate ? yearMatch : true;

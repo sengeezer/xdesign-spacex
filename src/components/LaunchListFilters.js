@@ -25,7 +25,6 @@ export class LaunchListFilters extends Component {
   };
 
   onFilterChange = (e) => {
-    // Works: console.log(e.target.value);
     this.props.filterByYear(e.target.value)
   };
 

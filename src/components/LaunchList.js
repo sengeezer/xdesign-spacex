@@ -19,14 +19,6 @@ export const LaunchList = props => {
   );
 };
 
-// const mapStateToProps = (state) => {
-//   const { launches, filters } = state;
-//   console.log('from state:', filters);
-//   return {
-//     launches: getVisibleLaunches(launches, filters),
-//   };
-// };
-
 const mapStateToProps = ({ launches, filters }) => ({
   launches: getVisibleLaunches(launches, filters),
 });
