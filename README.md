@@ -12,8 +12,6 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## TODO / Next steps
 
-* Complete refresh (/ reset) functionality
 * Complete styling (& add icons)
 * Populate launch year drop down from API
-* Add propTypes
 * Add tests
