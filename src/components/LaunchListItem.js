@@ -1,4 +1,5 @@
 import dayjs from 'dayjs';
+import PropTypes from 'prop-types';
 
 const LaunchListItem = ({ launch }) => {
 
@@ -10,6 +11,10 @@ const LaunchListItem = ({ launch }) => {
       <p>{launch.rocket.rocket_name}</p>
     </li>
   );
+};
+
+LaunchListItem.propTypes = {
+  launch: PropTypes.object,
 };
 
 export default LaunchListItem;

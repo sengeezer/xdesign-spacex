@@ -1,4 +1,5 @@
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 
 import { sortDesc, sortAsc, filterByYear } from '../actions/filters';
 
@@ -54,5 +55,12 @@ const mapDispatchToProps = (dispatch, props) => ({
 });
 
 const mapStateToProps = ({ filters }) => ({ filters });
+
+LaunchListFilters.propTypes = {
+  sortDesc: PropTypes.func,
+  sortAsc: PropTypes.func,
+  filterByYear: PropTypes.func,
+  filters: PropTypes.object
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(LaunchListFilters);
