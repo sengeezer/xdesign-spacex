@@ -1,0 +1,12 @@
+ul.LaunchList-list {
+  list-style: none;
+
+  li {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+
+  }
+}
