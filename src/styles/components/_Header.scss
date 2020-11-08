@@ -11,9 +11,16 @@
   }
 
   h1 {
-    font-size: 2.2rem; // 22px
+    font-size: 1.6rem; // 22px
     font-family: $font-family;
     color: $font-color;
     text-transform: uppercase;
   }
+}
+
+.refreshButton {
+  border-bottom-left-radius: 1.2rem;
+  border-top-left-radius: 1.2rem;
+  border: 0;
+  height: 2.4rem;
 }
