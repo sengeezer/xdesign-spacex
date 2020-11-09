@@ -5,10 +5,13 @@ const LaunchListItem = ({ launch }) => {
 
   return (
     <li>
-      <h2>{launch.flight_number}</h2>
+      <h2>#{launch.flight_number}</h2>
       <h3>{launch.mission_name}</h3>
-      <p>{dayjs.unix(launch.launch_date_unix).format('DD/MM/YYYY')}</p>
-      <p>{launch.rocket.rocket_name}</p>
+
+      <div className="LaunchListItem-details">
+        <p className="date">{dayjs.unix(launch.launch_date_unix).format('DD/MM/YYYY')}</p>
+        <p className="rocketName">{launch.rocket.rocket_name}</p>
+      </div>
     </li>
   );
 };
