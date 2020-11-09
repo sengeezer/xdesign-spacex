@@ -2,6 +2,11 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Setup
+
+* Clone this repo.
+* Run `yarn` or `npm install` from the main folder.
+
 ## Available Scripts
 
 * **`yarn start`:** Runs the app in the development mode. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
@@ -10,7 +15,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 * **`yarn eject`:** **Note:** this is a one-way operation. Once you `eject`, you can’t go back!
 
 
-## TODO / Next steps
+## Next steps
 
 * Refine styling 
   * add icons
