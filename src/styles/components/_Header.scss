@@ -14,17 +14,21 @@
 
   h1 {
     font-size: 1.6rem; // 22px
+    
     font-family: $font-family;
+    font-weight: normal;
+    line-height: 1;
+    padding-top: 0.9rem;
     color: $font-color;
     text-transform: uppercase;
   }
 }
 
 .refreshButton {
-  border-bottom-left-radius: 1.2rem;
-  border-top-left-radius: 1.2rem;
+  border-bottom-left-radius: 1.8rem;
+  border-top-left-radius: 1.8rem;
   border: 0;
-  height: 2.4rem;
   position: absolute;
   right: 0;
+  padding-left: 2rem;
 }

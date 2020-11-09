@@ -21,12 +21,11 @@ export const LaunchListFilters = props => {
   };
 
   return (
-    <>
+    <div className="LaunchListFilters-container">
       <select
-        // value={this.props.filters.sortBy}
         onChange={onFilterChange}
       >
-        <option value="year">Filter by Year ▾</option>
+        <option value="year">Filter by Year</option>
         <option value="2020">2020</option>
         <option value="2019">2019</option>
         <option value="2018">2018</option>
@@ -44,7 +43,7 @@ export const LaunchListFilters = props => {
         <option value="2006">2006</option>
       </select>
       <button onClick={onSortChange}>Sort {props.filters.sortBy === 'desc' ? 'Descending' : 'Ascending'} ⇅</button>
-    </>
+    </div>
   );
 };
 
