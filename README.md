@@ -12,6 +12,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## TODO / Next steps
 
-* Complete styling (& add icons)
+* Refine styling 
+  * add icons
+  * clean up syle split by component
 * Populate launch year drop down from API
+* Accessibility
 * Add tests
